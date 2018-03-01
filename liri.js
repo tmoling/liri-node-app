@@ -69,7 +69,7 @@ function searchMovie() {
 
   // if there is no movieName, use "Mr. Nobody" as default
   if (!movieName) {
-    movieName = "Mr Nobody";
+    movieName = "Mr. Nobody";
   }
 
   //using trilogy api key
