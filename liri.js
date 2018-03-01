@@ -1,15 +1,5 @@
 //command as required in the HW instructions
-
-//*** */
-
-//parse turns string into an object...pulls info out one by one
-//jason srgument of "2" to make the format pretty....refer to weather.js
-
-//**** */
-
 require("dotenv").config();
-
-
 
 // allows access to keys.js, which contains my twitter and spotify api keys by way of .env file
 //.env file is in gitnore which hides them from other people
@@ -90,9 +80,9 @@ function searchMovie() {
   //console.log(queryUrl);
 
   omdb(queryUrl, function (error, response, body) {
-    // If the request is successful (i.e. if the response status code is 200)
+    // the request being successful is equivilant to "200"
     if (!error && response.statusCode === 200) {
-      // Parse the body of the site and recover just the imdbRating
+      //parse turns string into an object...pulls info out one by one
       console.log("Movie Title: " + JSON.parse(body).Title);
       console.log("Year Released: " + JSON.parse(body).Year);
       console.log("IMDB Rating: " + JSON.parse(body).Ratings[0].Value);
